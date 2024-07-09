@@ -1,15 +1,17 @@
 # Solution
 
-This repository contains the implementation of an assistant for the sagemaker documentation.
+This repository contains the implementation of an assistant  for the sagemaker documentation.
 
 ## Demo
 
-<video width="600" controls>
-  <source src="img/app.webm" type="video/webm">
+<video width="800" controls>
+  <source src="img/app.mp4" type="video/webm">
   Your browser does not support the video tag.
 </video>
 
 ## Approach
+
+The following approach uses RAG + CoT + Reranker implemented with Langgraph.
 
 ```python
                    +-----------+          
@@ -57,26 +59,26 @@ This repository contains the implementation of an assistant for the sagemaker do
 
 
 
-## Detailed Methodology
+## Methodology 
 
-### Initial Setup and Baseline
+### Setup and baseline
 
 1. **Understand the Data**: All data are markdown files with mixed content types including explanations, JSON, YAML, etc.
 2. **Baseline Solution**: Implemented a naive RAG approach to establish a baseline.
 3. **Evaluation**: Created a `ground truth testing dataset` and used accuracy as the `evaluation metric`.
 
-### Naive RAG Implementation
+### Naive RAG implementation
 
 - **Embedding Model**: Used HuggingFace's `BAAI/bge-small-en model` for creating embeddings.
 - **Document Splitting**: Split documents into chunks of 1000 tokens with a 200-token overlap.
 - **Vector Store**: Created a vector store using Chroma.
 
-### Chain-of-Thought (CoT) Enhancement
+### Chain-of-Thought (CoT) 
 
 - **System Prompt**: Developed a detailed system prompt to guide the model through a `chain-of-thought` process.
 - **Improved Accuracy**: Observed significant improvement in accuracy with the chain-of-thought approach.
 
-### Re-Ranking Mechanism
+### Re-Ranking 
 
 - **Cross-Encoder Reranker**: Implemented a reranker using HuggingFace's `BAAI/bge-reranker-base model`.
 - **Contextual Compression Retriever**: Enhanced the retriever to use the reranker for better document relevance.
@@ -84,19 +86,25 @@ This repository contains the implementation of an assistant for the sagemaker do
 ### Final Solution
 
 - **Evaluation**: Achieved high accuracy with the combined `RAG + CoT + Reranker approach`.
-- **Future Work**: Plans to explore further enhancements such as reflection, hybrid search, and integration with `cognitive architectures`.
+- **Future Work**: Explore further enhancements such as reflection, hybrid search, graphrag and a custom `cognitive architecture for RAG`.
 
-## How to Run
+## How to run
 
-1. **Install Dependencies**: Ensure all necessary libraries are installed.
+1. **Install dependencies**: Ensure all necessary libraries are installed.
 ```sh
    pip install -r requirements.txt
    streamlit run app.py
 ```
 
-## Future work
+## Disclaimer
 
-- create an image for the backend and the frontend.
+- For a production-ready system, further testing and optimization are required.
+- The system is designed for the Sagemaker documentation and may not generalize to other domains.
+- The accuracy metric may not be representative of real-world performance.
+
+## TODO
+
+- create an docker image for the backend and the frontend.
 - create an image for the vector store.
 - create an image to deploy Ollama for offline inference.
 - orchestrate the application using docker-compose.
