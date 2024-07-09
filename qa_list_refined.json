@@ -1,0 +1,231 @@
+[
+
+    {
+        "question": "Where can you find the logs for Amazon SageMaker algorithms?",
+        "options": {
+            "A": "AWS Management Console",
+            "B": "CloudWatch",
+            "C": "S3 Bucket",
+            "D": "SageMaker Studio"
+        },
+        "correct_answer": "B",
+        "explanation": "Amazon SageMaker algorithms produce Amazon CloudWatch logs, which provide detailed information on the training process.",
+        "source": "sagemaker_documentation/common-info-all-sagemaker-models-logs.md"
+    },
+    {
+        "question": "What is the type of the S3Uri property in the ConstraintsResource for a monitoring job?",
+        "options": {
+            "A": "Integer",
+            "B": "String",
+            "C": "Boolean",
+            "D": "List"
+        },
+        "correct_answer": "B",
+        "explanation": "The S3Uri property in the ConstraintsResource for a monitoring job is of type String.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.md"
+    },
+    {
+        "question": "What is the type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality?",
+        "options": {
+            "A": "String",
+            "B": "MetricsSource",
+            "C": "Integer",
+            "D": "Boolean"
+        },
+        "correct_answer": "B",
+        "explanation": "The type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality is MetricsSource.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-modelpackage-driftcheckmodelquality.md"
+    },
+    {
+        "question": "What should you do if you are new to Amazon SageMaker and need to set up the correct permissions and encryption?",
+        "options": {
+            "A": "Select an existing IAM role from the list",
+            "B": "Create a new IAM role and give it access to any S3 bucket",
+            "C": "Choose any IAM role from the list",
+            "D": "Skip setting up permissions and encryption"
+        },
+        "correct_answer": "B",
+        "explanation": "If you are new to Amazon SageMaker, you should create a new IAM role and give it access to any S3 bucket to set up the correct permissions and encryption.",
+        "source": "sagemaker_documentation/deeplens-getting-started-launch-sagemaker.md"
+    },
+    {
+        "question": "What is the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance?",
+        "options": {
+            "A": "String",
+            "B": "Integer",
+            "C": "List of String",
+            "D": "Boolean"
+        },
+        "correct_answer": "B",
+        "explanation": "The VolumeSizeInGB property in a SageMaker NotebookInstance is of type Integer.",
+        "source": "sagemaker_documentation/aws-resource-sagemaker-notebookinstance.md"
+    },
+    {
+        "question": "What is a prerequisite to successfully migrate resources to the latest SageMaker Operators for Kubernetes?",
+        "options": {
+            "A": "Uninstall the original version of SageMaker Operators for Kubernetes",
+            "B": "Install the latest SageMaker Operators for Kubernetes",
+            "C": "Clean up old resources",
+            "D": "Use the new SageMaker Operators for Kubernetes"
+        },
+        "correct_answer": "B",
+        "explanation": "To successfully migrate resources to the latest SageMaker Operators for Kubernetes, you must install the latest SageMaker Operators for Kubernetes.",
+        "source": "sagemaker_documentation/kubernetes-sagemaker-operators-migrate.md"
+    },
+    {
+        "question": "What is the maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig?",
+        "options": {
+            "A": "5",
+            "B": "10",
+            "C": "15",
+            "D": "20"
+        },
+        "correct_answer": "B",
+        "explanation": "According to the text, the maximum number of CloudWatch alarms that can be configured is 10.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-endpoint-autorollbackconfig.md"
+    },
+    {
+        "question": "What is the default value of the training_instance_type parameter?",
+        "options": {
+            "A": "ml.m5.large",
+            "B": "ml.m5.xlarge",
+            "C": "ml.m5.medium",
+            "D": "ml.m5.small"
+        },
+        "correct_answer": "B",
+        "explanation": "The default value of the training_instance_type parameter is \"ml.m5.xlarge\".",
+        "source": "sagemaker_documentation/sagemaker-projects-walkthrough.md"
+    },
+    {
+        "question": "What is the type of the JobResources property in the AWS::SageMaker::ModelQualityJobDefinition?",
+        "options": {
+            "A": "String",
+            "B": "MonitoringResources",
+            "C": "ModelQualityAppSpecification",
+            "D": "ModelQualityBaselineConfig"
+        },
+        "correct_answer": "B",
+        "explanation": "The type of the JobResources property in the AWS::SageMaker::ModelQualityJobDefinition is MonitoringResources.",
+        "source": "sagemaker_documentation/aws-resource-sagemaker-modelqualityjobdefinition.md"
+    },
+    {
+        "question": "What is the default value of the RootAccess for users of the notebook instance?",
+        "options": {
+            "A": "Disabled",
+            "B": "Enabled",
+            "C": "No access",
+            "D": "Custom access"
+        },
+        "correct_answer": "B",
+        "explanation": "The default value of the RootAccess for users of the notebook instance is Enabled.",
+        "source": "sagemaker_documentation/aws-resource-sagemaker-notebookinstance.md"
+    },
+    {
+        "question": "What does the AWS::SageMaker::EndpointConfig CaptureContentTypeHeader specify?",
+        "options": {
+            "A": "The network configuration of the endpoint",
+            "B": "The JSON and CSV content types of the data that the endpoint captures",
+            "C": "The file system configuration of the endpoint",
+            "D": "The user interface configuration of the endpoint"
+        },
+        "correct_answer": "B",
+        "explanation": "The CaptureContentTypeHeader specifies the JSON and CSV content types of the data that the endpoint captures.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-endpointconfig-datacaptureconfig-capturecontenttypeheader.md"
+    },
+    {
+        "question": "What is the type of the Line property in an AWS::SageMaker::ModelExplainabilityJobDefinition?",
+        "options": {
+            "A": "String",
+            "B": "Boolean",
+            "C": "Integer",
+            "D": "Float"
+        },
+        "correct_answer": "B",
+        "explanation": "The type of the Line property in an AWS::SageMaker::ModelExplainabilityJobDefinition is Boolean.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-modelexplainabilityjobdefinition-json.md"
+    },
+    {
+        "question": "What are the two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig?",
+        "options": {
+            "A": "KmsKeyId and S3Bucket",
+            "B": "KmsKeyId and S3Uri",
+            "C": "S3Uri and IAMRole",
+            "D": "OfflineStore and IAMRole"
+        },
+        "correct_answer": "B",
+        "explanation": "The two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig are KmsKeyId and S3Uri, which specify the KMS key ARN and the S3 URI of the OfflineStore, respectively.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-featuregroup-s3storageconfig.md"
+    },
+    {
+        "question": "What is the purpose of the MaxConcurrentInvocationsPerInstance property in the AsyncInferenceClientConfig?",
+        "options": {
+            "A": "To specify the minimum number of concurrent requests sent by the SageMaker client to the model container",
+            "B": "To specify the maximum number of concurrent requests sent by the SageMaker client to the model container",
+            "C": "To specify the optimal value for the SageMaker client to interact with the model container",
+            "D": "To specify the type of requests sent by the SageMaker client to the model container"
+        },
+        "correct_answer": "B",
+        "explanation": "The MaxConcurrentInvocationsPerInstance property specifies the maximum number of concurrent requests sent by the SageMaker client to the model container during asynchronous inference.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.md"
+    },
+    {
+        "question": "What is the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance?",
+        "options": {
+            "A": "String",
+            "B": "Integer",
+            "C": "List of String",
+            "D": "Boolean"
+        },
+        "correct_answer": "B",
+        "explanation": "The VolumeSizeInGB property in a SageMaker NotebookInstance is of type Integer.",
+        "source": "sagemaker_documentation/aws-resource-sagemaker-notebookinstance.md"
+    },
+    {
+        "question": "What is a prerequisite to delete an MLOps project using Amazon SageMaker Studio?",
+        "options": {
+            "A": "Basic familiarity with the Studio user interface",
+            "B": "IAM account or IAM Identity Center to sign in to Studio",
+            "C": "Update the AmazonSageMakerFullAccess policy",
+            "D": "All of the above"
+        },
+        "correct_answer": "D",
+        "explanation": "All the options are mentioned as prerequisites in the text: basic familiarity with the Studio user interface, IAM account or IAM Identity Center to sign in to Studio, and the condition in the AmazonSageMakerFullAccess policy.",
+        "source": "sagemaker_documentation/sagemaker-projects-delete.md"
+    },
+    {
+        "question": "What is the purpose of using a model package in Amazon SageMaker?",
+        "options": {
+            "A": "To create a database configuration",
+            "B": "To create a deployable model for real-time inferences or batch transform jobs",
+            "C": "To create a network configuration",
+            "D": "To create a user interface configuration"
+        },
+        "correct_answer": "B",
+        "explanation": "A model package is used to create a deployable model that can be used to get real-time inferences by creating a hosted endpoint or to run batch transform jobs.",
+        "source": "sagemaker_documentation/sagemaker-mkt-model-pkg-model.md"
+    },
+    {
+        "question": "What is the purpose of the MonitoringResources entity in AWS::SageMaker::ModelBiasJobDefinition?",
+        "options": {
+            "A": "To configure the model bias job definition",
+            "B": "To identify the resources to deploy for a monitoring job",
+            "C": "To declare the cluster config in YAML",
+            "D": "To specify the update requirement for the cluster config"
+        },
+        "correct_answer": "B",
+        "explanation": "The MonitoringResources entity identifies the resources to deploy for a monitoring job.",
+        "source": "sagemaker_documentation/aws-properties-sagemaker-modelbiasjobdefinition-monitoringresources.md"
+    },
+    {
+        "question": "What is the instance type specified in the ClusterConfig of the JobDefinition?",
+        "options": {
+            "A": "ml.m5.xlarge",
+            "B": "ml.m5.large",
+            "C": "ml.m5.medium",
+            "D": "ml.m5.small"
+        },
+        "correct_answer": "B",
+        "explanation": "The instance type specified in the ClusterConfig of the JobDefinition is ml.m5.large.",
+        "source": "sagemaker_documentation/aws-resource-sagemaker-modelexplainabilityjobdefinition.md"
+    }
+]

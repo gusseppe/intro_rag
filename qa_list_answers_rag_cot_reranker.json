@@ -1,0 +1,116 @@
+[
+    {
+        "question": "Where can you find the logs for Amazon SageMaker algorithms?",
+        "correct_answer": "D",
+        "explanation": "According to the context, the logs for Amazon SageMaker algorithms can be found in CloudWatch, specifically in the /aws/sagemaker/TrainingJobs log group in the AWS management console.",
+        "context": "Here's my chain of thought:\n\n1. The question asks where to find the logs for Amazon SageMaker algorithms.\n2. The context provides information about Amazon SageMaker algorithms producing Amazon CloudWatch logs, which provide detailed information on the training process.\n3. The context also provides specific instructions on how to see the logs in the AWS management console, including choosing CloudWatch, Logs, and then the /aws/sagemaker/TrainingJobs log group.\n4. The context does not mention any other locations where logs might be found, so it seems likely that the logs are only available in CloudWatch.\n\nAnswer: You can find the logs for Amazon SageMaker algorithms in the AWS management console, specifically in CloudWatch, by choosing Logs and then the /aws/sagemaker/TrainingJobs log group."
+    },
+    {
+        "question": "What is the type of the S3Uri property in the ConstraintsResource for a monitoring job?",
+        "correct_answer": "B",
+        "explanation": "The context explicitly states that the type of the S3Uri property is String.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the type of the S3Uri property in the ConstraintsResource for a monitoring job.\n2. The context provides information about the S3Uri property, which is part of the ConstraintsResource.\n3. The context states that the S3Uri property is Required: Yes and has a Type: String.\n4. The context also provides information about the constraints and statistics resources, but these are not directly relevant to the question.\n5. The only relevant information is the type of the S3Uri property, which is explicitly stated as String.\n\nAnswer: The type of the S3Uri property in the ConstraintsResource for a monitoring job is String."
+    },
+    {
+        "question": "What is the type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality?",
+        "correct_answer": "C",
+        "explanation": "The type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality is MetricsSource.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality.\n2. The context provides the syntax and properties of the AWS::SageMaker::ModelPackage DriftCheckModelQuality, which includes the Constraints and Statistics properties.\n3. The properties are both of type MetricsSource, which is a required property for the AWS::SageMaker::ModelQualityJobDefinition.\n\nAnswer: The type of the Constraints and Statistics properties in the AWS::SageMaker::ModelPackage DriftCheckModelQuality is MetricsSource."
+    },
+    {
+        "question": "What should you do if you are new to Amazon SageMaker and need to set up the correct permissions and encryption?",
+        "correct_answer": "D",
+        "explanation": "According to the context, if you are new to Amazon SageMaker, you need to create a new IAM role by choosing \"Create a new role\" and giving it access to your S3 bucket, and specify an encryption key if desired.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about what to do if you are new to Amazon SageMaker and need to set up the correct permissions and encryption.\n2. The context provides a step-by-step guide on how to set up a notebook instance, including choosing an IAM role, creating a new role, and configuring encryption.\n3. The context mentions that if you are new to Amazon SageMaker, you need to create a new IAM role by choosing \"Create a new role\" and giving it access to your S3 bucket.\n4. The context also mentions that you need to specify an encryption key if you want Amazon SageMaker to use an AWS Key Management Service key to encrypt data in the ML storage volume.\n5. The context provides information on how to specify the encryption key, including the formats it can be in (Key ID, Key ARN, Alias name, or Alias name ARN).\n\nAnswer: If you are new to Amazon SageMaker and need to set up the correct permissions and encryption, you should create a new IAM role by choosing \"Create a new role\" and giving it access to your S3 bucket, and specify an encryption key if desired."
+    },
+    {
+        "question": "What is the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance?",
+        "correct_answer": "C",
+        "explanation": "The data type of the VolumeSizeInGB property in a SageMaker NotebookInstance is Integer, as stated in the context.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance.\n2. The context provides two sets of information: one about SageMaker NotebookInstance properties and another about SageMaker Model Explainability Job Definition properties.\n3. I notice that both sets of properties have a VolumeSizeInGB property, which suggests that it might be a common property across different SageMaker resources.\n4. I focus on the SageMaker NotebookInstance properties and see that VolumeSizeInGB is listed as an Integer, which means it has a data type of Integer.\n\nAnswer: The data type of the VolumeSizeInGB property in a SageMaker NotebookInstance is Integer."
+    },
+    {
+        "question": "What is a prerequisite to successfully migrate resources to the latest SageMaker Operators for Kubernetes?",
+        "correct_answer": "B",
+        "explanation": "According to the context, one of the prerequisites to successfully migrate resources to the latest SageMaker Operators for Kubernetes is to install the latest SageMaker Operators for Kubernetes.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about a prerequisite to successfully migrate resources to the latest SageMaker Operators for Kubernetes.\n2. The context provides information about the prerequisites, which are listed as \"Prerequisites\" in the context.\n3. The first prerequisite mentioned is to install the latest SageMaker Operators for Kubernetes, which is a specific step-by-step process.\n4. The second prerequisite mentioned is to install the new Application Auto Scaling Operator if using HostingAutoscalingPolicy resources, which is an optional step.\n5. The context does not mention any other prerequisites beyond these two, so I will focus on these two.\n\nAnswer: The prerequisites to successfully migrate resources to the latest SageMaker Operators for Kubernetes are to install the latest SageMaker Operators for Kubernetes and, optionally, the new Application Auto Scaling Operator if using HostingAutoscalingPolicy resources."
+    },
+    {
+        "question": "What is the maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig?",
+        "correct_answer": "A",
+        "explanation": "The context states that the \"Alarm\" property has a maximum value of 10, which is the maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig.\n2. The context provides information about the AutoRollbackConfig entity, including its syntax, properties, and logging and monitoring options.\n3. The relevant property is \"Alarms\", which is a list of CloudWatch alarms. The context does not provide a specific maximum number of alarms, but it does mention that the \"Alarm\" property has a maximum value of 10.\n4. Therefore, the maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig is 10.\n\nAnswer: The maximum number of CloudWatch alarms that can be configured to monitor metrics on an endpoint in an AWS::SageMaker::Endpoint AutoRollbackConfig is 10."
+    },
+    {
+        "question": "What is the default value of the training_instance_type parameter?",
+        "correct_answer": "C",
+        "explanation": "The context explicitly states that the default value of the training_instance_type parameter is \"ml.m5.xlarge\".",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the default value of the training_instance_type parameter.\n2. The context provides a snippet of code that defines the training_instance_type parameter with a default value of \"ml.m5.xlarge\".\n3. There is no additional information in the context that contradicts or updates the default value.\n4. Therefore, the default value of the training_instance_type parameter is \"ml.m5.xlarge\".\n\nAnswer: The default value of the training_instance_type parameter is \"ml.m5.xlarge\"."
+    },
+    {
+        "question": "What is the type of the JobResources property in the AWS::SageMaker::ModelQualityJobDefinition?",
+        "correct_answer": "A",
+        "explanation": "The type of the JobResources property is MonitoringResources, as specified in the context for the related entity AWS::SageMaker::ModelBiasJobDefinition.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the type of the JobResources property in the AWS::SageMaker::ModelQualityJobDefinition.\n2. The context provides information about the AWS::SageMaker::ModelQualityJobDefinition and its properties, but it doesn't explicitly mention the JobResources property.\n3. However, the context does mention the properties of the AWS::SageMaker::ModelBiasJobDefinition, which is a related entity. The JobResources property is listed as one of the properties of the AWS::SageMaker::ModelBiasJobDefinition.\n4. The type of the JobResources property is specified as MonitoringResources, which is a property type that is not explicitly defined in the provided context.\n\nAnswer: The type of the JobResources property is MonitoringResources."
+    },
+    {
+        "question": "What is the default value of the RootAccess for users of the notebook instance?",
+        "correct_answer": "I DON'T KNOW",
+        "explanation": "The context does not provide enough information to answer the question.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the default value of the RootAccess for users of the notebook instance.\n2. The context provides information about the RootAccess property, but it does not explicitly mention the default value.\n3. I look for any relevant information in the context that might imply the default value, but I don't find any.\n4. I realize that the context does not provide enough information to answer the question, so I conclude that I DON'T KNOW the default value of the RootAccess for users of the notebook instance.\n\nAnswer: I DON'T KNOW."
+    },
+    {
+        "question": "What does the AWS::SageMaker::EndpointConfig CaptureContentTypeHeader specify?",
+        "correct_answer": "A",
+        "explanation": "The context states that the CaptureContentTypeHeader captures JSON and CSV content types of the data, specifying the CsvContentTypes and JsonContentTypes properties.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the AWS::SageMaker::EndpointConfig CaptureContentTypeHeader.\n2. The context provides information about the CaptureContentTypeHeader, specifying that it captures JSON and CSV content types of the data.\n3. The syntax and properties sections provide more details about the CaptureContentTypeHeader, including the CsvContentTypes and JsonContentTypes properties.\n4. The CsvContentTypes property is a list of CSV content types that the endpoint captures, and the JsonContentTypes property is a list of JSON content types that the endpoint captures.\n5. The Required property is set to No, indicating that it is not mandatory to specify these content types.\n\nAnswer: The AWS::SageMaker::EndpointConfig CaptureContentTypeHeader captures JSON and CSV content types of the data, specifying the CsvContentTypes and JsonContentTypes properties."
+    },
+    {
+        "question": "What is the type of the Line property in an AWS::SageMaker::ModelExplainabilityJobDefinition?",
+        "correct_answer": "D",
+        "explanation": "The type of the \"Line\" property is specified as Boolean in the provided JSON schema.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the type of the \"Line\" property in an AWS::SageMaker::ModelExplainabilityJobDefinition.\n2. The provided context is a JSON schema for the AWS::SageMaker::ModelExplainabilityJobDefinition, which includes a property called \"Line\" with a description \"Property description not available.\".\n3. The property type is specified as Boolean, and it is not required.\n4. There is no additional information in the context that would suggest the type of the \"Line\" property is anything other than Boolean.\n\nAnswer: The type of the \"Line\" property in an AWS::SageMaker::ModelExplainabilityJobDefinition is Boolean."
+    },
+    {
+        "question": "What are the two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig?",
+        "correct_answer": "D",
+        "explanation": "According to the context, the two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig are KmsKeyId and S3Uri.",
+        "context": "Here is my chain of thought:\n\n1. The question asks about the two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig.\n2. The context provides the syntax and properties of the S3StorageConfig, which includes two properties: KmsKeyId and S3Uri.\n3. The KmsKeyId property is described as the AWS Key Management Service (KMS) key ARN of the key used to encrypt any objects written into the OfflineStore S3 location.\n4. The S3Uri property is described as the S3 URI, or location in Amazon S3, of OfflineStore.\n5. Both properties are relevant to the question, and there are no other properties mentioned in the context.\n\nAnswer: The two properties of the AWS::SageMaker::FeatureGroup S3StorageConfig are KmsKeyId and S3Uri."
+    },
+    {
+        "question": "What is the purpose of the MaxConcurrentInvocationsPerInstance property in the AsyncInferenceClientConfig?",
+        "correct_answer": "D",
+        "explanation": "The MaxConcurrentInvocationsPerInstance property controls the maximum number of concurrent requests sent by the SageMaker client to the model container, allowing users to fine-tune the performance of asynchronous inference.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the purpose of the MaxConcurrentInvocationsPerInstance property in the AsyncInferenceClientConfig.\n2. The context provides information about the AsyncInferenceClientConfig, which is used by SageMaker to interact with the model container during asynchronous inference.\n3. The property MaxConcurrentInvocationsPerInstance is described as the maximum number of concurrent requests sent by the SageMaker client to the model container.\n4. The property is not required, and if no value is provided, SageMaker will choose an optimal value.\n5. This suggests that the purpose of the MaxConcurrentInvocationsPerInstance property is to control the number of concurrent requests sent to the model container, allowing the user to fine-tune the performance of the asynchronous inference process.\n\nAnswer: The MaxConcurrentInvocationsPerInstance property controls the maximum number of concurrent requests sent by the SageMaker client to the model container, allowing users to fine-tune the performance of asynchronous inference."
+    },
+    {
+        "question": "What is the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance?",
+        "correct_answer": "C",
+        "explanation": "The data type of the VolumeSizeInGB property in a SageMaker NotebookInstance is Integer, as stated in the context.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the data type of the VolumeSizeInGB property in a SageMaker NotebookInstance.\n2. The context provides two sets of information: one about SageMaker NotebookInstance properties and another about SageMaker Model Explainability Job Definition properties.\n3. I notice that both sets of properties have a VolumeSizeInGB property, which suggests that it might be a common property across different SageMaker resources.\n4. I focus on the SageMaker NotebookInstance properties and see that VolumeSizeInGB is listed as an Integer, which means it has a data type of Integer.\n\nAnswer: The data type of the VolumeSizeInGB property in a SageMaker NotebookInstance is Integer."
+    },
+    {
+        "question": "What is a prerequisite to delete an MLOps project using Amazon SageMaker Studio?",
+        "correct_answer": "B",
+        "explanation": "According to the context, the prerequisite to delete an MLOps project using Amazon SageMaker Studio is being the creator of the project, which is part of the service catalog permission \"servicecatalog:TerminateProvisionedProduct\" in the AmazonSageMakerFullAccess policy. This is included in option B, \"All of the above\".",
+        "context": "Here's my chain of thought:\n\n1. The question asks about a prerequisite to delete an MLOps project using Amazon SageMaker Studio.\n2. The context provides two procedures: one for deleting an MLOps project and another for a SageMaker MLOps Project Walkthrough.\n3. The first procedure mentions prerequisites, which include being the creator of the project and having the service catalog permission \"servicecatalog:TerminateProvisionedProduct\" in the AmazonSageMakerFullAccess policy.\n4. The second procedure does not mention deleting a project, but it does mention the need for an IAM or IAM Identity Center account to sign in to Studio, permission to use SageMaker-provided project templates, and basic familiarity with the Studio user interface.\n5. Since the question specifically asks about deleting an MLOps project, I focus on the first procedure and its prerequisites.\n6. The only relevant prerequisite mentioned is being the creator of the project, which is part of the service catalog permission.\n\nAnswer: You must be the creator of the project, which is part of the service catalog permission \"servicecatalog:TerminateProvisionedProduct\" in the AmazonSageMakerFullAccess policy."
+    },
+    {
+        "question": "What is the purpose of using a model package in Amazon SageMaker?",
+        "correct_answer": "B",
+        "explanation": "The context mentions that a model package can be used to create a deployable model for real-time inferences or batch transform jobs.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the purpose of using a model package in Amazon SageMaker.\n2. The context provides information on how to use a model package to create a deployable model.\n3. The context mentions that a model package can be used to create a hosted endpoint for real-time inferences or to run batch transform jobs.\n4. The context also mentions that a model package can be created from a model package using the SageMaker console, API, or Python SDK.\n5. The context does not provide any information on the specific purpose of using a model package, but it does provide information on how to use it.\n\nAnswer: A model package in Amazon SageMaker is used to create a deployable model that can be used for real-time inferences or batch transform jobs."
+    },
+    {
+        "question": "What is the purpose of the MonitoringResources entity in AWS::SageMaker::ModelBiasJobDefinition?",
+        "correct_answer": "A",
+        "explanation": "The context states that the MonitoringResources entity identifies the resources to deploy for a monitoring job, which is the purpose of the entity in the context of AWS::SageMaker::ModelBiasJobDefinition.",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the purpose of the MonitoringResources entity in AWS::SageMaker::ModelBiasJobDefinition.\n2. The context provides information about the MonitoringResources entity, which identifies the resources to deploy for a monitoring job.\n3. The context also mentions the syntax and properties of the MonitoringResources entity, including the ClusterConfig property, which is required.\n4. The context does not mention the purpose of the MonitoringResources entity in relation to the AWS::SageMaker::ModelBiasJobDefinition, but it does provide information about the entity's properties and syntax.\n5. Based on the context, it appears that the MonitoringResources entity is used to specify the resources needed to run a monitoring job for a SageMaker model bias job definition.\n\nAnswer: The MonitoringResources entity identifies the resources to deploy for a monitoring job."
+    },
+    {
+        "question": "What is the instance type specified in the ClusterConfig of the JobDefinition?",
+        "correct_answer": "C",
+        "explanation": "The context shows that the InstanceType is set to \"ml.m5.large\".",
+        "context": "Here's my chain of thought:\n\n1. The question asks about the instance type specified in the ClusterConfig of the JobDefinition.\n2. The context provides the JobDefinition, which has a ClusterConfig property.\n3. Within the ClusterConfig property, there are three properties: InstanceCount, InstanceType, and VolumeSizeInGB.\n4. The question specifically asks about the InstanceType, which is a required property with a type of String.\n5. The context shows that the InstanceType is set to \"ml.m5.large\".\n\nAnswer: The instance type specified in the ClusterConfig of the JobDefinition is \"ml.m5.large\"."
+    }
+]
