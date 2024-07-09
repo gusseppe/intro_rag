@@ -5,7 +5,7 @@ This repository contains the implementation of an assistant  for the sagemaker d
 ## Demo
 
 <video width="800" controls>
-  <source src="img/app.mp4" type="video/webm">
+  <source src="img/app.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
