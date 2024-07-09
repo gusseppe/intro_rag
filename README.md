@@ -9,7 +9,7 @@ This repository contains the implementation of an assistant  for the sagemaker d
   Your browser does not support the video tag.
 </video> -->
 
-[Watch the video](img/app.mp4)
+[![Streamlit App Demo](https://img.youtube.com/vi/5Imka0GCNGI/0.jpg)](https://www.youtube.com/watch?v=5Imka0GCNGI)
 
 ## Approach
 
