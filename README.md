@@ -106,6 +106,10 @@ The following approach uses RAG + CoT + Reranker implemented with Langgraph.
 
 ## TODO
 
+- add a function to update the vectore store when a new document is added or updated.
+- apply SOTA best practices for the RAG system (https://arxiv.org/pdf/2407.01219)
+- create fewshot examples to finetune the rag prompts using dspy. Consider human in the loop to help to get examples.
+- test with more rag metrics like faithfulness, relevance, etc.
 - create an docker image for the backend and the frontend.
 - create an image for the vector store.
 - create an image to deploy Ollama for offline inference.
