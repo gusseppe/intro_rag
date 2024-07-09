@@ -2,6 +2,7 @@ import os
 import re
 import textwrap
 import streamlit as st
+import logging
 
 from typing import List, Dict, Optional, Callable, TypedDict
 from rich.panel import Panel
@@ -25,39 +26,13 @@ from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
 from rich import print
 from langgraph.graph import END, StateGraph
+from config import CONFIG
 
-load_dotenv('env')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
-CONFIG = {
-    # Paths
-    "PERSIST_DIRECTORY": "chroma_db_index",
-    "DOCS_DIRECTORY": "./sagemaker_documentation",
-    "ENV_FILE": "env",
-    "LC_CACHE_PATH": ".langchain.db",
+load_dotenv(CONFIG["API"])
 
-    # LLM settings
-    "LLM_NAME": "llama3-8b-8192",
-    "LLM_TEMPERATURE": 0.0,
-
-    # Embedding model
-    "EMBEDDING_MODEL_NAME": "BAAI/bge-small-en",
-    "EMBEDDING_MODEL_KWARGS": {"device": "cpu"},
-    "EMBEDDING_ENCODE_KWARGS": {"normalize_embeddings": True},
-
-    # Retriever
-    "CHUNK_SIZE": 1000,
-    "CHUNK_OVERLAP": 200,
-    "DOCS_GLOB_PATTERN": "**/*.md",
-
-    # Retriever settings
-    "RETRIEVER_SEARCH_TYPE": "mmr",
-    "RETRIEVER_SEARCH_K": 6,
-    "RETRIEVER_LAMBDA_MULT": 0.25,
-
-    # Reranker model
-    "RERANKER_MODEL_NAME": "BAAI/bge-reranker-base",
-    "RERANKER_TOP_N": 3,
-}
 
 set_llm_cache(SQLiteCache(database_path=CONFIG["LC_CACHE_PATH"]))
 
