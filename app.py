@@ -1,19 +1,24 @@
 import streamlit as st
 from typing import TypedDict, Optional
-from backend import rag_graph
+from backend import RAG
+
 from streamlit_option_menu import option_menu
 
-class GraphState(TypedDict):
-    question: str
-    misuse: Optional[bool]
-    response: Optional[str]
-    answer: Optional[str]
-
-def clear_chat_history():
-    st.session_state.messages = []
 
 def main():
     st.set_page_config(page_title="SageMaker Documentation RAG", layout="wide")
+
+    rag = RAG(debug=False)
+    rag_graph = rag.rag_graph
+
+    class GraphState(TypedDict):
+        question: str
+        misuse: Optional[bool]
+        response: Optional[str]
+        answer: Optional[str]
+
+    def clear_chat_history():
+        st.session_state.messages = []
     
     # Initialize session state variables
     if 'messages' not in st.session_state:
