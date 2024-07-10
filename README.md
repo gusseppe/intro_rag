@@ -1,11 +1,21 @@
 # Solution 
 
 
-
 This repository contains the implementation of an assistant for the sagemaker documentation.
 Check the [thought_process.ipynb](thought_process.ipynb) for a detailed explanation.
 
-## Demo
+## Demo version 2 (Updated)
+
+**Home**
+![Home](img/home.png)
+
+**Chat**
+![Home](img/chat.png)
+
+**Debugging**
+![Home](img/debugging.png)
+
+## Demo video for version 1
 
 
 [![Streamlit App Demo](https://img.youtube.com/vi/5Imka0GCNGI/0.jpg)](https://www.youtube.com/watch?v=5Imka0GCNGI)
