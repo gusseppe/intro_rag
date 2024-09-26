@@ -21,12 +21,16 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 from langchain_groq import ChatGroq
 from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+from langchain_community.chat_models import ChatOllama
 from langchain_chroma import Chroma
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
 from rich import print
 from langgraph.graph import END, StateGraph
 from config import CONFIG
+from langchain_postgres import PGVector
+from langchain_postgres.vectorstores import PGVector
+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -52,6 +56,7 @@ class RAG:
         self.llm_generator = self.get_llm_generator()
         self.embedder = self.initialize_embeddings()
         self.chunks = self.load_and_split_documents(CONFIG["DOCS_DIRECTORY"])
+        # self.vector_store = self.create_or_load_vector_store2(self.chunks, self.embedder)
         self.vector_store = self.create_or_load_vector_store(self.chunks, self.embedder)
         self.retriever = self.setup_retriever(self.vector_store)
         self.rag_chain = self.setup_rag_chain(self.retriever, self.llm_generator)
@@ -63,6 +68,7 @@ class RAG:
     @st.cache_resource
     def get_llm_generator():
         return ChatGroq(cache=True, temperature=CONFIG["LLM_TEMPERATURE"], model_name=CONFIG["LLM_NAME"])
+        # return ChatOllama(model="phi3") # offline LLM
 
     @staticmethod
     def escape_curly_braces(text: str) -> str:
@@ -82,6 +88,7 @@ class RAG:
     @st.cache_resource
     def load_and_split_documents(directory: str) -> List[Document]:
         if any(os.scandir(CONFIG["PERSIST_DIRECTORY"])):
+            print("Loading from cache")
             return None
 
         loader = DirectoryLoader(directory, glob=CONFIG["DOCS_GLOB_PATTERN"], show_progress=True)
@@ -107,6 +114,27 @@ class RAG:
                 embedding=_embedder,
                 persist_directory=CONFIG["PERSIST_DIRECTORY"]
             )
+
+    # If you want to use Postgres as the vector store uncomment this method
+    
+    # @staticmethod
+    # @st.cache_resource
+    # def create_or_load_vector_store2(_chunks: List[Document], _embedder: HuggingFaceBgeEmbeddings) -> Chroma:
+    #     connection = "postgresql+psycopg://postgres:your-super-secret-and-long-postgres-password@localhost:5432/postgres"  # Uses psycopg3!
+    #     collection_name = "langchain_pg_collection"
+
+    #     if any(os.scandir(CONFIG["PERSIST_DIRECTORY"])):
+    #         vector_store = PGVector(embeddings=_embedder, collection_name=collection_name, connection=connection)
+    #     else:
+    #         vector_store = PGVector.from_documents(
+    #             documents=_chunks,
+    #             embedding=_embedder,
+    #             # collection_name=collection_name,
+    #             connection=connection,
+    #             use_jsonb=True,
+    #         )
+
+    #     return vector_store
 
     @staticmethod
     @st.cache_resource

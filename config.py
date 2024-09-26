@@ -8,7 +8,7 @@ CONFIG = {
     "DOCS_DIRECTORY": os.getenv("DOCS_DIRECTORY", "./sagemaker_documentation"),
     "API": os.getenv("API", "env"),
     "LC_CACHE_PATH": os.getenv("LC_CACHE_PATH", ".langchain.db"),
-    "LLM_NAME": os.getenv("LLM_NAME", "llama3-8b-8192"),
+    "LLM_NAME": os.getenv("LLM_NAME", "llama-3.1-8b-instant"),
     "LLM_TEMPERATURE": float(os.getenv("LLM_TEMPERATURE", 0.0)),
     "EMBEDDING_MODEL_NAME": os.getenv("EMBEDDING_MODEL_NAME", "BAAI/bge-small-en"),
     "EMBEDDING_MODEL_KWARGS": {"device": os.getenv("EMBEDDING_MODEL_DEVICE", "cpu")},
